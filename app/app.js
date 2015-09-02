@@ -4,6 +4,9 @@ var app = angular.module("app", [
 
 app.config(function ($routeProvider) {
 	$routeProvider.when("/test",{
-		templateUrl: "./app/views/test.html"
+		templateUrl: "app/views/test.html"
+	});
+	$routeProvider.when("/np",{
+		templateUrl: "app/views/naturalPerson.html"
 	});
 });
