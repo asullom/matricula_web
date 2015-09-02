@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<title>Angular</title>
 </head>
 <body>
 	
-	<div>
+	<div ng-controller="testController">
 		<input type="text" ng-model="nombre">
 		{{ nombre }}
+		<input type="button" ng-click="saludo()" value ="Saludo">
 	</div>
-	<input type="button" onclick="saludo()" value ="Saludo">
+	
 
 	<script src= "static/angular.js"></script>
 	
 	<script>
-	function saludo () {
-		alert("Hola, ya te saludé");
-	}
+	var app=angular.module("app",[]);
+
+	app.controller("testController", function($scope){
+		$scope.saludo = function () {
+			console.log("Hola, ya te saludé " + $scope.nombre);
+		}
+	});
 	</script>
 
 </body>
