@@ -5,26 +5,14 @@
 	<title>Angular</title>
 </head>
 <body>
-	<div ng-controller="testController">
-		<input type="text" ng-model="nombre">
-		{{ nombre }}
-		<input type="button" ng-click="saludo()" value ="Saludo">
-		<table>
-			<tr>
-				<td>last name</td>
-				<td>first name</td>
-			</tr>
-			<tr ng-repeat="d in personas | filter: nombre">
-				<td>{{ d.last_name }}</td>
-				<td>{{ d.first_name }}</td>
-			</tr>
-		</table>
+	<a href="#test">Ir a test</a>
+	
+	<div ng-view></div>
 
-
-
-	</div>
 	<script src= "static/angular.js"></script>
+	<script src= "static/angular-route.js"></script>
 	<script src= "app/app.js"></script>
+	<script src= "app/controllers/testController.js"></script>
 </body>
 </html>
 

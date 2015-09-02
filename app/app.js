@@ -1,21 +1,9 @@
-var app = angular.module("app", []);
+var app = angular.module("app", [
+	'ngRoute',
+	]);
 
-app.controller("testController", function($scope) {
-	$scope.saludo = function() {
-		console.log("Hola " + $scope.nombre);
-	}
-	$scope.personas =[
-    {
-        "last_name": "Apaza",
-        "first_name": "Juan",
-    },
-    {
-        "last_name": "Sullon",
-        "first_name": "Angel",
-    },
-    {
-        "last_name": "Sucapuca",
-        "first_name": "Miguel",
-    }
-	]
+app.config(function ($routeProvider) {
+	$routeProvider.when("/test",{
+		templateUrl: "./app/views/test.html"
+	});
 });
