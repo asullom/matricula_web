@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular</title>
+</head>
+<body>
+	
+	<div>
+		<input type="text" ng-model="nombre">
+		{{ nombre }}
+	</div>
+	<input type="button" onclick="saludo()" value ="Saludo">
+
+	<script src= "static/angular.js"></script>
+	
+	<script>
+	function saludo () {
+		alert("Hola, ya te saludé");
+	}
+	</script>
+
+</body>
+</html>
+
