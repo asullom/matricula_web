@@ -10,4 +10,7 @@ app.config(function ($routeProvider) {
 	$routeProvider.when("/np",{
 		templateUrl: "app/views/naturalPerson.html"
 	});
+	$routeProvider.when("/ciclo",{
+		templateUrl: "app/views/ciclo.html"
+	});
 });
